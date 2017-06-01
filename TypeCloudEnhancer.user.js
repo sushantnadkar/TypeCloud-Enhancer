@@ -4,7 +4,7 @@
 // @version      2.0
 // @description  Add missing features to CDP i.e. TyprCloud
 // @author       sushantnadkar
-// @downloadURL  https://github.com/sushantn-packt/TypeCloud-Enhancer/raw/master/TypeCloudEnhancer.user.js
+// @downloadURL  https://github.com/sushantnadkar/TypeCloud-Enhancer/raw/master/TypeCloudEnhancer.user.js
 // @match        https://cdp.packtpub.com/*/wp-admin/post.php?post=*&action=edit
 // @grant        none
 // ==/UserScript==
@@ -256,13 +256,13 @@ setTimeout(function() {
     btn.setAttribute('role', 'button');
     btn.setAttribute('style', 'float: right;');
     btn.innerHTML = "<button role='presentation' type='button' tabindex='-1'>"    +
-                         "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantn-packt.github.io/TypeCloud-Enhancer/icons/keyboard-shortcut-list.png\")'></i>"    +
+                         "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantnadkar.github.io/TypeCloud-Enhancer/icons/keyboard-shortcut-list.png\")'></i>"    +
                          "<div id='srtlst' class='mce-tooltip mce-tooltip-n' role='presentation' style='position: absolute; top: 25px; left: -25px; display: none;'>"+
                              "<div class='mce-tooltip-arrow'></div>"+
                              "<div class='mce-tooltip-inner'>Keyboard Shortcuts List</div>"+
                          "</div>"+
                      "</button>";
-    btn.setAttribute( 'onclick', "window.open('https://github.com/sushantn-packt/TypeCloud-Enhancer')" );
+    btn.setAttribute( 'onclick', "window.open('https://github.com/sushantnadkar/TypeCloud-Enhancer')" );
     btn.onmouseover = function(){document.getElementById('srtlst').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('srtlst').style.display = 'none';};
     document.getElementById("mceu_33-body").appendChild(btn);
@@ -273,13 +273,13 @@ setTimeout(function() {
     btn.setAttribute('class', 'mce-widget mce-btn mce-last');
     btn.setAttribute('role', 'button');
     btn.innerHTML = "<button role='presentation' type='button' tabindex='-1'>"+
-                        "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantn-packt.github.io/TypeCloud-Enhancer/icons/image-border.png\")'></i>"+
+                        "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantnadkar.github.io/TypeCloud-Enhancer/icons/image-border.png\")'></i>"+
                          "<div id='imgbrd' class='mce-tooltip mce-tooltip-n' role='presentation' style='position: absolute; top: 25px; left: -25px; display: none;'>"+
                              "<div class='mce-tooltip-arrow'></div>"+
                              "<div class='mce-tooltip-inner'>Add Image Border</div>"+
                          "</div>"+
                     "</button>";
-    btn.onclick = function(){addBorder();};
+    btn.onclick = function(){addBorder("one");};
     btn.onmouseover = function(){document.getElementById('imgbrd').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('imgbrd').style.display = 'none';};
     document.getElementById("mceu_33-body").appendChild(btn);
@@ -291,13 +291,13 @@ setTimeout(function() {
     btn.setAttribute('role', 'button');
     btn.setAttribute('style', 'float: right;');
     btn.innerHTML = "<button role='presentation' type='button' tabindex='-1'>"    +
-                         "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantn-packt.github.io/TypeCloud-Enhancer/icons/keyword-list.png\")'></i>"    +
+                         "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantnadkar.github.io/TypeCloud-Enhancer/icons/keyword-list.png\")'></i>"    +
                          "<div id='keywrd' class='mce-tooltip mce-tooltip-n' role='presentation' style='position: absolute; top: 25px; left: -25px; display: none;'>"+
                              "<div class='mce-tooltip-arrow'></div>"+
                              "<div class='mce-tooltip-inner'>Keyword List</div>"+
                          "</div>"+
                      "</button>";
-    btn.setAttribute( 'onclick', "window.open('https://sushantn-packt.github.io/TypeCloud-Enhancer/keyword_list/keyword_list.htm')" );
+    btn.setAttribute( 'onclick', "window.open('https://sushantnadkar.github.io/TypeCloud-Enhancer/keyword_list/keyword_list.htm')" );
     btn.onmouseover = function(){document.getElementById('keywrd').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('keywrd').style.display = 'none';};
     document.getElementById("mceu_33-body").appendChild(btn);
@@ -308,7 +308,7 @@ setTimeout(function() {
     btn.setAttribute('class', 'mce-widget mce-btn mce-last');
     btn.setAttribute('role', 'button');
     btn.innerHTML = "<button role='presentation' type='button' tabindex='-1'>"+
-                        "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantn-packt.github.io/TypeCloud-Enhancer/icons/emoji-icon.png\")'></i>"+
+                        "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantnadkar.github.io/TypeCloud-Enhancer/icons/emoji-icon.png\")'></i>"+
                          "<div id='ico' class='mce-tooltip mce-tooltip-n' role='presentation' style='position: absolute; top: 25px; left: -25px; display: none;'>"+
                              "<div class='mce-tooltip-arrow'></div>"+
                              "<div class='mce-tooltip-inner'>Icon/Emoji</div>"+
@@ -326,7 +326,7 @@ setTimeout(function() {
     btn.setAttribute('role', 'button');
     btn.setAttribute('style', 'float: right;');
     btn.innerHTML = "<button role='presentation' type='button' tabindex='-1'>"+
-                       "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantn-packt.github.io/TypeCloud-Enhancer/icons/graphic-bundle.png\")'>"+"</i></a>"+
+                       "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantnadkar.github.io/TypeCloud-Enhancer/icons/graphic-bundle.png\")'>"+"</i></a>"+
                          "<div id='gb' class='mce-tooltip mce-tooltip-n' role='presentation' style='position: absolute; top: 25px; left: -25px; display: none;'>"+
                              "<div class='mce-tooltip-arrow'></div>"+
                              "<div class='mce-tooltip-inner'>Graphic Bundle</div>"+
@@ -344,7 +344,7 @@ setTimeout(function() {
     btn.setAttribute('role', 'button');
     btn.setAttribute('style', 'float: right;');
     btn.innerHTML = "<button role='presentation' type='button' tabindex='-1'>"    +
-                         "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantn-packt.github.io/TypeCloud-Enhancer/icons/pdf-preview.png\")'></i>"    +
+                         "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantnadkar.github.io/TypeCloud-Enhancer/icons/pdf-preview.png\")'></i>"    +
                          "<div id='pdfprv' class='mce-tooltip mce-tooltip-n' role='presentation' style='position: absolute; top: 25px; left: -25px; display: none;'>"+
                              "<div class='mce-tooltip-arrow'></div>"+
                              "<div class='mce-tooltip-inner'>PDF Preview</div>"+
@@ -353,6 +353,24 @@ setTimeout(function() {
     btn.setAttribute( 'onclick', "window.open('"+ $('#cdp-editor-tabs > a').attr('href') +"')" );
     btn.onmouseover = function(){document.getElementById('pdfprv').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('pdfprv').style.display = 'none';};
+    document.getElementById("mceu_33-body").appendChild(btn);
+
+    // add button in tool bar to add border to all images
+    btn = document.createElement('div');
+    btn.setAttribute('id', 'imgbrdallbtn');
+    btn.setAttribute('class', 'mce-widget mce-btn mce-last');
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('style', 'float: right;');
+    btn.innerHTML = "<button role='presentation' type='button' tabindex='-1'>"    +
+                         "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantnadkar.github.io/TypeCloud-Enhancer/icons/image-border.png\")'></i>"    +
+                         "<div id='imgbrdall' class='mce-tooltip mce-tooltip-n' role='presentation' style='position: absolute; top: 25px; left: -25px; display: none;'>"+
+                             "<div class='mce-tooltip-arrow'></div>"+
+                             "<div class='mce-tooltip-inner'>Add Border to all Images (BE CAREFUL)</div>"+
+                         "</div>"+
+                     "</button>";
+    btn.onclick = function(){addBorder("all");};
+    btn.onmouseover = function(){document.getElementById('imgbrdall').style.display = 'block';};
+    btn.onmouseout = function(){document.getElementById('imgbrdall').style.display = 'none';};
     document.getElementById("mceu_33-body").appendChild(btn);
 
     //function to trigger mouse event
@@ -565,7 +583,16 @@ setTimeout(function() {
     }
 
     //function to add image border
-    function addBorder(){
+    function addBorder(param){
+        if (param == "all") {
+            tinyMCE.activeEditor.dom.addClass(tinyMCE.activeEditor.dom.select('IMG'), 'image-border');
+            var ingg = tinyMCE.activeEditor.dom.select('IMG');
+            for (i = 0; i < ingg.length; i++) {
+                var og = ingg[i].outerHTML;
+                var nw = "<div class='CDPAlignCenter CDPAlign'>"+og+"</div>";
+                ingg[i].outerHTML = nw;
+            }
+        } else if (param == "one") {
         var img = tinyMCE.activeEditor.selection.getContent();
         if(tinyMCE.activeEditor.selection.getNode().nodeName == 'IMG') {
             var img1 = tinyMCE.activeEditor.selection.getNode();
@@ -607,7 +634,7 @@ setTimeout(function() {
             div.appendChild(div2);
             $(document.body).append(div);
             btn.focus();
-        }
+        }}
     }
 
     //function to add icon
