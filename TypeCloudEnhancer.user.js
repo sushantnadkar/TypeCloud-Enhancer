@@ -5,65 +5,21 @@
 // @description  Add missing features to CDP i.e. TyprCloud
 // @author       sushantnadkar
 // @downloadURL  https://github.com/sushantnadkar/TypeCloud-Enhancer/raw/master/TypeCloudEnhancer.user.js
-// @match        https://cdp.packtpub.com/*/wp-admin/post.php?post=*&action=edit
+// @match        https://cdp.packtpub.com/*/wp-admin/post.php?post=*&action=edit*
 // @grant        none
 // ==/UserScript==
 
 setTimeout(function() {
 
     triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
-    var text51 = $("span#mceu_51-text").text();
-    var text52 = $("span#mceu_52-text").text();
-    var text53 = $("span#mceu_53-text").text();
-    var text54 = $("span#mceu_54-text").text();
     var text55 = $("span#mceu_55-text").text();
+    var text56 = $("span#mceu_56-text").text();
+    var text57 = $("span#mceu_57-text").text();
+    var text58 = $("span#mceu_58-text").text();
+    var text59 = $("span#mceu_59-text").text();
     var h1, h2, h3, h4, para, cb, frb, bq, t, ib;
 
-    if(text51 == "Heading 1") {
-        h1 = "#mceu_51";
-        h2 = "#mceu_52";
-        h3 = "#mceu_53";
-        h4 = "#mceu_54";
-        para = "#mceu_55";
-        cb = "#mceu_56";
-        frb = "#mceu_57";
-        bq = "#mceu_58";
-        t = "#mceu_59";
-        ib = "#mceu_60";
-    } else if(text52 == "Heading 1") {
-        h1 = "#mceu_52";
-        h2 = "#mceu_53";
-        h3 = "#mceu_54";
-        h4 = "#mceu_55";
-        para = "#mceu_56";
-        cb = "#mceu_57";
-        frb = "#mceu_58";
-        bq = "#mceu_59";
-        t = "#mceu_60";
-        ib = "#mceu_61";
-    } else if (text53 == "Heading 1") {
-        h1 = "#mceu_53";
-        h2 = "#mceu_54";
-        h3 = "#mceu_55";
-        h4 = "#mceu_56";
-        para = "#mceu_57";
-        cb = "#mceu_58";
-        frb = "#mceu_59";
-        bq = "#mceu_60";
-        t = "#mceu_61";
-        ib = "#mceu_62";
-    } else if (text54 == "Heading 1") {
-        h1 = "#mceu_54";
-        h2 = "#mceu_55";
-        h3 = "#mceu_56";
-        h4 = "#mceu_57";
-        para = "#mceu_58";
-        cb = "#mceu_59";
-        frb = "#mceu_60";
-        bq = "#mceu_61";
-        t = "#mceu_62";
-        ib = "#mceu_63";
-    } else if (text55 == "Heading 1") {
+    if(text55 == "Heading 1") {
         h1 = "#mceu_55";
         h2 = "#mceu_56";
         h3 = "#mceu_57";
@@ -74,6 +30,50 @@ setTimeout(function() {
         bq = "#mceu_62";
         t = "#mceu_63";
         ib = "#mceu_64";
+    } else if(text56 == "Heading 1") {
+        h1 = "#mceu_56";
+        h2 = "#mceu_57";
+        h3 = "#mceu_58";
+        h4 = "#mceu_59";
+        para = "#mceu_60";
+        cb = "#mceu_61";
+        frb = "#mceu_62";
+        bq = "#mceu_63";
+        t = "#mceu_64";
+        ib = "#mceu_65";
+    } else if (text57 == "Heading 1") {
+        h1 = "#mceu_57";
+        h2 = "#mceu_58";
+        h3 = "#mceu_59";
+        h4 = "#mceu_60";
+        para = "#mceu_61";
+        cb = "#mceu_62";
+        frb = "#mceu_63";
+        bq = "#mceu_64";
+        t = "#mceu_65";
+        ib = "#mceu_66";
+    } else if (text58 == "Heading 1") {
+        h1 = "#mceu_58";
+        h2 = "#mceu_59";
+        h3 = "#mceu_60";
+        h4 = "#mceu_61";
+        para = "#mceu_62";
+        cb = "#mceu_63";
+        frb = "#mceu_64";
+        bq = "#mceu_65";
+        t = "#mceu_66";
+        ib = "#mceu_67";
+    } else if (text59 == "Heading 1") {
+        h1 = "#mceu_59";
+        h2 = "#mceu_60";
+        h3 = "#mceu_61";
+        h4 = "#mceu_62";
+        para = "#mceu_63";
+        cb = "#mceu_64";
+        frb = "#mceu_65";
+        bq = "#mceu_66";
+        t = "#mceu_67";
+        ib = "#mceu_68";
     }
     triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
     //event listner
@@ -161,43 +161,43 @@ setTimeout(function() {
         if(e.altKey && e.keyCode == 88) { //Alt + X   Clear format/Remove link
             e.preventDefault();
             triggerMouseEvent (document.querySelector ("#mceu_3"), "click");
-            triggerMouseEvent (document.querySelector ("#mceu_15"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_13"), "click");
         }
         if(e.altKey && e.keyCode == 38) { //Alt + up arrow   superscript
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_7"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_10"), "click");
         }
         if(e.altKey && e.keyCode == 40) { //Alt + down arrow   subscript
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_8"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_11"), "click");
         }
         if(e.altKey && e.keyCode == 39) { //Alt + right arrow   increase indent
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_10"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_17"), "click");
         }
         if(e.altKey && e.keyCode == 37) { //Alt + left arrow   decrease indent
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_11"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_18"), "click");
         }
         if(e.altKey && e.keyCode == 45) { //Alt + Insert   align left
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_22"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_14"), "click");
         }
         if(e.altKey && e.keyCode == 36) { //Alt + Home   align center
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_23"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_15"), "click");
         }
         if(e.altKey && e.keyCode == 33) { //Alt + Page Up   align right
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_24"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_16"), "click");
         }
         if(e.altKey && e.keyCode == 82) { //Alt + R   Page Break
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_20"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_26"), "click");
         }
         if(e.altKey && e.keyCode == 66) { //Alt + B   Bullet List
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_12"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_23"), "click");
         }
         if(e.altKey && e.keyCode == 78) { //Alt + N   Numbered List
             e.preventDefault();
@@ -205,28 +205,24 @@ setTimeout(function() {
         }
         if(e.altKey && e.keyCode == 77) { //Alt + M   Set start of numbered list
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_25"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_24"), "click");
         }
         if(e.altKey && e.keyCode == 85) { //Alt + U   Insert/Edit Link/URL
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_14"), "click");
-	        triggerMouseEvent (document.querySelector ("#mceu_45"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_12"), "click");
+	        triggerMouseEvent (document.querySelector ("#mceu_45"), "click");//////////////////////////////
         }
         if(e.altKey && e.keyCode == 67) { //Alt + C   Code
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_18"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_20"), "click");
         }
         if(e.altKey && e.keyCode == 83) { //Alt + S   Screen Text
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_19"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_21"), "click");
         }
         if(e.altKey && e.keyCode == 89) { //Alt + Y   Inline Quote
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_21"), "click");
-        }
-        if(e.altKey && e.keyCode == 189) { //Alt + -   subscript
-            e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_8"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_22"), "click");
         }
         if(e.ctrlKey && e.keyCode == 83) { //Ctrl + S   save
             e.preventDefault();
@@ -242,10 +238,7 @@ setTimeout(function() {
         }
 	    if(e.ctrlKey && e.keyCode == 77) { //Ctrl + M   Add Book Comment
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_28"), "click");
-        }
-        if(e.ctrlKey && e.keyCode == 70) { //Alt + F   Figure Ref Block
-            e.preventDefault();
+            triggerMouseEvent (document.querySelector ("#mceu_6"), "click");
         }
     });
 
