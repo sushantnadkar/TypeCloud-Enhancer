@@ -134,7 +134,7 @@ setTimeout(function() {
             triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
             setTimeout(function(){
                 triggerMouseEvent (document.querySelector (frb), "click");
-                triggerMouseEvent (document.querySelector ("#mceu_23"), "click");
+                triggerMouseEvent (document.querySelector ("#mceu_16"), "click");
             }, 200);
         }
         if(e.altKey && e.keyCode == 81) { //Alt + Q   Blockquote
@@ -161,7 +161,7 @@ setTimeout(function() {
         if(e.altKey && e.keyCode == 88) { //Alt + X   Clear format/Remove link
             e.preventDefault();
             triggerMouseEvent (document.querySelector ("#mceu_3"), "click");
-            triggerMouseEvent (document.querySelector ("#mceu_13"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_14"), "click");
         }
         if(e.altKey && e.keyCode == 38) { //Alt + up arrow   superscript
             e.preventDefault();
