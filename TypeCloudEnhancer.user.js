@@ -241,6 +241,14 @@ setTimeout(function() {
             triggerMouseEvent (document.querySelector ("#mceu_7"), "click");
         }
     });
+    var btngrp = document.createElement('div');
+    btngrp.setAttribute('id', 'custom-btn-group');
+    btngrp.setAttribute('style', 'width: 440px;');
+    btngrp.setAttribute('class', 'mce-container mce-flow-layout-item mce-btn-group');
+    var btngrpbdy = document.createElement('div');
+    btngrpbdy.setAttribute('id', 'custom-btn-group-body');
+    btngrp.appendChild(btngrpbdy);
+    document.getElementById('mceu_31-body').appendChild(btngrp);
 
     // add link in tool bar to cdp shortcut list on github
     var btn = document.createElement('div');
@@ -258,7 +266,7 @@ setTimeout(function() {
     btn.setAttribute( 'onclick', "window.open('https://github.com/sushantnadkar/TypeCloud-Enhancer')" );
     btn.onmouseover = function(){document.getElementById('srtlst').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('srtlst').style.display = 'none';};
-    document.getElementById("mceu_33-body").appendChild(btn);
+    document.getElementById("custom-btn-group-body").appendChild(btn);
 
     // add Add Border button in tool bar
     btn = document.createElement('div');
@@ -275,7 +283,7 @@ setTimeout(function() {
     btn.onclick = function(){addBorder("one");};
     btn.onmouseover = function(){document.getElementById('imgbrd').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('imgbrd').style.display = 'none';};
-    document.getElementById("mceu_33-body").appendChild(btn);
+    document.getElementById("custom-btn-group-body").appendChild(btn);
 
     // add link in tool bar to keyword list list on github
     btn = document.createElement('div');
@@ -293,7 +301,7 @@ setTimeout(function() {
     btn.setAttribute( 'onclick', "window.open('https://sushantnadkar.github.io/TypeCloud-Enhancer/keyword_list/keyword_list.htm')" );
     btn.onmouseover = function(){document.getElementById('keywrd').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('keywrd').style.display = 'none';};
-    document.getElementById("mceu_33-body").appendChild(btn);
+    document.getElementById("custom-btn-group-body").appendChild(btn);
 
     // add emoji/icon formatting button in tool bar
     btn = document.createElement('div');
@@ -310,7 +318,7 @@ setTimeout(function() {
     btn.onclick = function(){addIcon();};
     btn.onmouseover = function(){document.getElementById('ico').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('ico').style.display = 'none';};
-    document.getElementById("mceu_33-body").appendChild(btn);
+    document.getElementById("custom-btn-group-body").appendChild(btn);
 
     // add graphic bundle download button in tool bar
     btn = document.createElement('div');
@@ -328,7 +336,7 @@ setTimeout(function() {
     btn.onclick = function(){drawGbDiv();};
     btn.onmouseover = function(){document.getElementById('gb').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('gb').style.display = 'none';};
-    document.getElementById("mceu_33-body").appendChild(btn);
+    document.getElementById("custom-btn-group-body").appendChild(btn);
 
     // add link in tool bar to PDF preview list on github
     btn = document.createElement('div');
@@ -346,7 +354,7 @@ setTimeout(function() {
     btn.setAttribute( 'onclick', "window.open('"+ $('#cdp-editor-tabs > a').attr('href') +"')" );
     btn.onmouseover = function(){document.getElementById('pdfprv').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('pdfprv').style.display = 'none';};
-    document.getElementById("mceu_33-body").appendChild(btn);
+    document.getElementById("custom-btn-group-body").appendChild(btn);
 
     // add button in tool bar to add border to all images
     btn = document.createElement('div');
@@ -364,7 +372,7 @@ setTimeout(function() {
     btn.onclick = function(){addBorder("all");};
     btn.onmouseover = function(){document.getElementById('imgbrdall').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('imgbrdall').style.display = 'none';};
-    document.getElementById("mceu_33-body").appendChild(btn);
+    document.getElementById("custom-btn-group-body").appendChild(btn);
 
     //function to trigger mouse event
     function triggerMouseEvent (node, eventType) {
@@ -674,14 +682,6 @@ setTimeout(function() {
         }
     }
 
-    //keyboard listner for ctlr + S on webpage
-    document.addEventListener('keydown', function(e) {
-        if (e.keyCode == 83 && e.ctrlKey) {
-            e.preventDefault();
-            triggerMouseEvent (document.evaluate("//input[@type='submit' and @value='Save']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue, "click");
-        }
-    }, false);
-
     //refresh docmap on change to heading level formatting using mouse
     var test = document.getElementById("mceu_51");
     test.addEventListener("click", drawDocMap, false);
@@ -690,7 +690,7 @@ setTimeout(function() {
     var a = document.getElementsByClassName("cdp-editor-bottom-bar");
     a[0].setAttribute('style', 'margin-right: 76px;');
 
-    //add event listener and refresh docmap on keydown
+    //add event listener and refresh docmap on keydown and keyup
     tinymce.activeEditor.on('keydown', drawDocMap);
     tinymce.activeEditor.on('keyup', drawDocMap);
 }, 5000);
