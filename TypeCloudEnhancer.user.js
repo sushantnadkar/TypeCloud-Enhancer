@@ -224,10 +224,6 @@ setTimeout(function() {
             e.preventDefault();
             triggerMouseEvent (document.querySelector ("#mceu_23"), "click");
         }
-        if(e.ctrlKey && e.keyCode == 83) { //Ctrl + S   save
-            e.preventDefault();
-            triggerMouseEvent (document.evaluate("//input[@type='submit' and @value='Save']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue, "click");
-        }
         if(e.altKey && e.keyCode == 68) { //Alt + D   Add Image Border
             e.preventDefault();
             triggerMouseEvent (document.querySelector ("#imgbrdbtn"), "click");
@@ -243,12 +239,12 @@ setTimeout(function() {
     });
     var btngrp = document.createElement('div');
     btngrp.setAttribute('id', 'custom-btn-group');
-    btngrp.setAttribute('style', 'width: 440px;');
     btngrp.setAttribute('class', 'mce-container mce-flow-layout-item mce-btn-group');
+    btngrp.setAttribute('style', 'width: 440px;');
     var btngrpbdy = document.createElement('div');
     btngrpbdy.setAttribute('id', 'custom-btn-group-body');
     btngrp.appendChild(btngrpbdy);
-    document.getElementById('mceu_31-body').appendChild(btngrp);
+    $('#mceu_31-body').append(btngrp);
 
     // add link in tool bar to cdp shortcut list on github
     var btn = document.createElement('div');
@@ -372,6 +368,23 @@ setTimeout(function() {
     btn.onclick = function(){addBorder("all");};
     btn.onmouseover = function(){document.getElementById('imgbrdall').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('imgbrdall').style.display = 'none';};
+    document.getElementById("custom-btn-group-body").appendChild(btn);
+    
+    btn = document.createElement('div');
+    btn.setAttribute('id', 'delcmtsbtn');
+    btn.setAttribute('class', 'mce-widget mce-btn mce-last');
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('style', 'float: right;');
+    btn.innerHTML = "<button role='presentation' type='button' tabindex='-1'>"    +
+                         "<i class='mce-ico mce-i-none' style='background-image: url(\"https://sushantnadkar.github.io/TypeCloud-Enhancer/icons/pdf-preview.png\")'></i>"    +
+                         "<div id='delcmts' class='mce-tooltip mce-tooltip-n' role='presentation' style='position: absolute; top: 25px; left: -25px; display: none;'>"+
+                             "<div class='mce-tooltip-arrow'></div>"+
+                             "<div class='mce-tooltip-inner'>Delete all Comments (BE CAREFUL)</div>"+
+                         "</div>"+
+                     "</button>";
+    btn.onclick = function(){deleteComments();};
+    btn.onmouseover = function(){document.getElementById('delcmts').style.display = 'block';};
+    btn.onmouseout = function(){document.getElementById('delcmts').style.display = 'none';};
     document.getElementById("custom-btn-group-body").appendChild(btn);
 
     //function to trigger mouse event
@@ -682,6 +695,54 @@ setTimeout(function() {
         }
     }
 
+    //function to delete all comments
+    function deleteComments() {
+            //var myBookmark = tinyMCE.activeEditor.selection.getBookmark();
+            var div = document.createElement('div');
+            div.id = 'infobox';
+            div.className = 'vex vex-theme-plain';
+            var div1 = document.createElement('div');
+            div1.className = 'vex-overlay';
+            div.appendChild(div1);
+            var div2 = document.createElement('div');
+            div2.className = 'vex-content';
+            var form = document.createElement('div');
+            form.className = 'vex-dialog-form';
+            var div3 = document.createElement('div');
+            div3.className = 'vex-dialog-message';
+            div3.append(document.createTextNode("This action will delete all the comments and this action is NON-RECOVERABLE !!!!!\nAre you sure you want to delete all the comments?"));
+            var div4 = document.createElement('div');
+            div4.className = 'vex-dialog-buttons';
+            var btn = document.createElement('button');
+            btn.className = 'vex-dialog-button-primary vex-dialog-button vex-first vex-last';
+            btn.append(document.createTextNode("YES"));
+            btn.onclick = function() {
+                $("div").remove('#infobox');
+                tinyMCE.execCommand('mceFocus', true, "tinymce");
+                //tinyMCE.activeEditor.selection.moveToBookmark(myBookmark);
+                $(tinyMCE.activeEditor.dom.select('mark')).contents().unwrap();
+            };
+            var btn1 = document.createElement('button');
+            btn1.className = 'vex-dialog-button-primary vex-dialog-button vex-first vex-last';
+            btn1.append(document.createTextNode("NO"));
+            btn1.setAttribute('style', 'margin-right:50px;');
+            btn1.onclick = function() {
+                $("div").remove('#infobox');
+                tinyMCE.execCommand('mceFocus', true, "tinymce");
+                //tinyMCE.activeEditor.selection.moveToBookmark(myBookmark);
+            };
+            div4.appendChild(btn);
+            div4.appendChild(btn1);
+            form.appendChild(div3);
+            form.appendChild(div4);
+            div2.appendChild(form);
+            div.appendChild(div1);
+            div.appendChild(div2);
+            $(document.body).append(div);
+            btn1.focus();
+        //$(tinyMCE.activeEditor.dom.select('mark')).contents().unwrap();
+    }
+
     //refresh docmap on change to heading level formatting using mouse
     var test = document.getElementById("mceu_51");
     test.addEventListener("click", drawDocMap, false);
@@ -690,7 +751,7 @@ setTimeout(function() {
     var a = document.getElementsByClassName("cdp-editor-bottom-bar");
     a[0].setAttribute('style', 'margin-right: 76px;');
 
-    //add event listener and refresh docmap on keydown and keyup
+    //add event listener and refresh docmap on keydown
     tinymce.activeEditor.on('keydown', drawDocMap);
     tinymce.activeEditor.on('keyup', drawDocMap);
 }, 5000);
