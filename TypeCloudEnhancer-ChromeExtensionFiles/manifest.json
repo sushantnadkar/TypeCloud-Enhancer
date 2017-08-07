@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "content_scripts": [ {
+        "exclude_globs":    [  ],
+        "include_globs":    [ "*" ],
+        "js":               [ "inject.js" ],
+        "matches":          [   "https://cdp.packtpub.com/*/wp-admin/post.php?post=*&action=edit*"],
+        "run_at": "document_end"
+    } ],
+    "web_accessible_resources": [
+        "TypeCloudEnhancer.user.js"
+    ],
+    "converted_from_user_script": true,
+    "description":  "Adds missing features to CDP i.e. TyprCloud",
+    "name":         "TypeCloud Enhancer",
+    "version":      "1"
+}
