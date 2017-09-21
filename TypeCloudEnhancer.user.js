@@ -1,14 +1,3 @@
-// ==UserScript==
-// @name         TypeCloud Enhancer
-// @namespace    sushantnadkar
-// @version      2.0
-// @description  Add missing features to CDP i.e. TyprCloud
-// @author       sushantnadkar
-// @downloadURL  https://github.com/sushantnadkar/TypeCloud-Enhancer/raw/master/TypeCloudEnhancer.user.js
-// @match        https://cdp.packtpub.com/*/wp-admin/post.php?post=*&action=edit*
-// @grant        none
-// ==/UserScript==
-
 setTimeout(function() {
 
     triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
@@ -77,7 +66,7 @@ setTimeout(function() {
     }
     triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
     //event listner
-    tinymce.activeEditor.on('keydown', function(e) {
+    tinyMCE.activeEditor.on('keydown', function(e) {
         if(e.altKey && e.keyCode === 49) { //Alt + 1   heading level 1
             e.preventDefault();
             triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
@@ -161,11 +150,11 @@ setTimeout(function() {
         if(e.altKey && e.keyCode == 88) { //Alt + X   Clear format/Remove link
             e.preventDefault();
             triggerMouseEvent (document.querySelector ("#mceu_3"), "click");
-            triggerMouseEvent (document.querySelector ("#mceu_14"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_15"), "click");
         }
         if(e.altKey && e.keyCode == 38) { //Alt + up arrow   superscript
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_11"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_12"), "click");
         }
         if(e.altKey && e.keyCode == 40) { //Alt + down arrow   subscript
             e.preventDefault();
@@ -173,56 +162,56 @@ setTimeout(function() {
         }
         if(e.altKey && e.keyCode == 39) { //Alt + right arrow   increase indent
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_18"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_19"), "click");
         }
         if(e.altKey && e.keyCode == 37) { //Alt + left arrow   decrease indent
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_19"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_20"), "click");
         }
         if(e.altKey && e.keyCode == 45) { //Alt + Insert   align left
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_15"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_16"), "click");
         }
         if(e.altKey && e.keyCode == 36) { //Alt + Home   align center
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_16"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_17"), "click");
         }
         if(e.altKey && e.keyCode == 33) { //Alt + Page Up   align right
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_17"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_18"), "click");
         }
         if(e.altKey && e.keyCode == 82) { //Alt + R   Page Break
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_27"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_28"), "click");
         }
         if(e.altKey && e.keyCode == 66) { //Alt + B   Bullet List
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_24"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_25"), "click");
         }
         if(e.altKey && e.keyCode == 78) { //Alt + N   Numbered List
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_25"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_26"), "click");
         }
         if(e.altKey && e.keyCode == 77) { //Alt + M   Set start of numbered list
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_26"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_27"), "click");
         }
         if(e.altKey && e.keyCode == 85) { //Alt + U   Insert/Edit Link/URL
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_13"), "click");
-	        triggerMouseEvent (document.querySelector ("#mceu_45"), "click");//////////////////////////////
+            triggerMouseEvent (document.querySelector ("#mceu_14"), "click");
+	        triggerMouseEvent (document.querySelector ("#mceu_49"), "click");//////////////////////////////
         }
         if(e.altKey && e.keyCode == 67) { //Alt + C   Code
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_21"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_22"), "click");
         }
         if(e.altKey && e.keyCode == 83) { //Alt + S   Screen Text
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_22"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_23"), "click");
         }
         if(e.altKey && e.keyCode == 89) { //Alt + Y   Inline Quote
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_23"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_24"), "click");
         }
         if(e.altKey && e.keyCode == 68) { //Alt + D   Add Image Border
             e.preventDefault();
@@ -244,7 +233,7 @@ setTimeout(function() {
     var btngrpbdy = document.createElement('div');
     btngrpbdy.setAttribute('id', 'custom-btn-group-body');
     btngrp.appendChild(btngrpbdy);
-    $('#mceu_31-body').append(btngrp);
+    $('#mceu_32-body').append(btngrp);
 
     // add link in tool bar to cdp shortcut list on github
     var btn = document.createElement('div');
@@ -279,7 +268,7 @@ setTimeout(function() {
     btn.onclick = function(){addBorder("one");};
     btn.onmouseover = function(){document.getElementById('imgbrd').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('imgbrd').style.display = 'none';};
-    document.getElementById("custom-btn-group-body").appendChild(btn);
+    //document.getElementById("custom-btn-group-body").appendChild(btn);
 
     // add link in tool bar to keyword list list on github
     btn = document.createElement('div');
