@@ -233,7 +233,7 @@ setTimeout(function() {
     var btngrpbdy = document.createElement('div');
     btngrpbdy.setAttribute('id', 'custom-btn-group-body');
     btngrp.appendChild(btngrpbdy);
-    $('#mceu_32-body').append(btngrp);
+    $('#mceu_31-body').append(btngrp);
 
     // add link in tool bar to cdp shortcut list on github
     var btn = document.createElement('div');
