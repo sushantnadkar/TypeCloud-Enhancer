@@ -1,11 +1,11 @@
 setTimeout(function() {
 
     triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
-    var text55 = $("span#mceu_55-text").text();
-    var text56 = $("span#mceu_56-text").text();
-    var text57 = $("span#mceu_57-text").text();
-    var text58 = $("span#mceu_58-text").text();
-    var text59 = $("span#mceu_59-text").text();
+    var text55 = $("span#mceu_59-text").text();
+    var text56 = $("span#mceu_60-text").text();
+    var text57 = $("span#mceu_61-text").text();
+    var text58 = $("span#mceu_61-text").text();
+    var text59 = $("span#mceu_63-text").text();
     var h1, h2, h3, h4, para, cb, frb, bq, t, ib;
 
     if(text55 == "Heading 1") {
@@ -150,68 +150,68 @@ setTimeout(function() {
         if(e.altKey && e.keyCode == 88) { //Alt + X   Clear format/Remove link
             e.preventDefault();
             triggerMouseEvent (document.querySelector ("#mceu_3"), "click");
-            triggerMouseEvent (document.querySelector ("#mceu_15"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_16"), "click");
         }
         if(e.altKey && e.keyCode == 38) { //Alt + up arrow   superscript
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_12"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_13"), "click");
         }
         if(e.altKey && e.keyCode == 40) { //Alt + down arrow   subscript
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_12"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_14"), "click");
         }
         if(e.altKey && e.keyCode == 39) { //Alt + right arrow   increase indent
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_19"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_21"), "click");
         }
         if(e.altKey && e.keyCode == 37) { //Alt + left arrow   decrease indent
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_20"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_22"), "click");
         }
         if(e.altKey && e.keyCode == 45) { //Alt + Insert   align left
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_16"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_18"), "click");
         }
         if(e.altKey && e.keyCode == 36) { //Alt + Home   align center
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_17"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_19"), "click");
         }
         if(e.altKey && e.keyCode == 33) { //Alt + Page Up   align right
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_18"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_20"), "click");
         }
         if(e.altKey && e.keyCode == 82) { //Alt + R   Page Break
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_28"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_30"), "click");
         }
         if(e.altKey && e.keyCode == 66) { //Alt + B   Bullet List
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_25"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_27"), "click");
         }
         if(e.altKey && e.keyCode == 78) { //Alt + N   Numbered List
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_26"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_28"), "click");
         }
         if(e.altKey && e.keyCode == 77) { //Alt + M   Set start of numbered list
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_27"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_29"), "click");
         }
         if(e.altKey && e.keyCode == 85) { //Alt + U   Insert/Edit Link/URL
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_14"), "click");
-	        triggerMouseEvent (document.querySelector ("#mceu_49"), "click");//////////////////////////////
+            triggerMouseEvent (document.querySelector ("#mceu_15"), "click");
+	        triggerMouseEvent (document.querySelector ("#mceu_51"), "click");//////////////////////////////
         }
         if(e.altKey && e.keyCode == 67) { //Alt + C   Code
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_22"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_24"), "click");
         }
         if(e.altKey && e.keyCode == 83) { //Alt + S   Screen Text
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_23"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_25"), "click");
         }
         if(e.altKey && e.keyCode == 89) { //Alt + Y   Inline Quote
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_24"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_26"), "click");
         }
         if(e.altKey && e.keyCode == 68) { //Alt + D   Add Image Border
             e.preventDefault();
@@ -223,7 +223,7 @@ setTimeout(function() {
         }
 	    if(e.ctrlKey && e.keyCode == 77) { //Ctrl + M   Add Book Comment
             e.preventDefault();
-            triggerMouseEvent (document.querySelector ("#mceu_7"), "click");
+            triggerMouseEvent (document.querySelector ("#mceu_9"), "click");
         }
     });
     var btngrp = document.createElement('div');
