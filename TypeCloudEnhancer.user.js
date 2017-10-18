@@ -1,58 +1,14 @@
 setTimeout(function() {
 
     triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
-    var text55 = $("span#mceu_59-text").text();
-    var text56 = $("span#mceu_60-text").text();
-    var text57 = $("span#mceu_61-text").text();
-    var text58 = $("span#mceu_61-text").text();
-    var text59 = $("span#mceu_63-text").text();
+    var text59 = $("span#mceu_59-text").text();
+    var text60 = $("span#mceu_60-text").text();
+    var text61 = $("span#mceu_61-text").text();
+    var text62 = $("span#mceu_61-text").text();
+    var text63 = $("span#mceu_63-text").text();
     var h1, h2, h3, h4, para, cb, frb, bq, t, ib;
 
-    if(text55 == "Heading 1") {
-        h1 = "#mceu_55";
-        h2 = "#mceu_56";
-        h3 = "#mceu_57";
-        h4 = "#mceu_58";
-        para = "#mceu_59";
-        cb = "#mceu_60";
-        frb = "#mceu_61";
-        bq = "#mceu_62";
-        t = "#mceu_63";
-        ib = "#mceu_64";
-    } else if(text56 == "Heading 1") {
-        h1 = "#mceu_56";
-        h2 = "#mceu_57";
-        h3 = "#mceu_58";
-        h4 = "#mceu_59";
-        para = "#mceu_60";
-        cb = "#mceu_61";
-        frb = "#mceu_62";
-        bq = "#mceu_63";
-        t = "#mceu_64";
-        ib = "#mceu_65";
-    } else if (text57 == "Heading 1") {
-        h1 = "#mceu_57";
-        h2 = "#mceu_58";
-        h3 = "#mceu_59";
-        h4 = "#mceu_60";
-        para = "#mceu_61";
-        cb = "#mceu_62";
-        frb = "#mceu_63";
-        bq = "#mceu_64";
-        t = "#mceu_65";
-        ib = "#mceu_66";
-    } else if (text58 == "Heading 1") {
-        h1 = "#mceu_58";
-        h2 = "#mceu_59";
-        h3 = "#mceu_60";
-        h4 = "#mceu_61";
-        para = "#mceu_62";
-        cb = "#mceu_63";
-        frb = "#mceu_64";
-        bq = "#mceu_65";
-        t = "#mceu_66";
-        ib = "#mceu_67";
-    } else if (text59 == "Heading 1") {
+    if(text59 == "Heading 1") {
         h1 = "#mceu_59";
         h2 = "#mceu_60";
         h3 = "#mceu_61";
@@ -63,6 +19,50 @@ setTimeout(function() {
         bq = "#mceu_66";
         t = "#mceu_67";
         ib = "#mceu_68";
+    } else if(text60 == "Heading 1") {
+        h1 = "#mceu_60";
+        h2 = "#mceu_61";
+        h3 = "#mceu_62";
+        h4 = "#mceu_63";
+        para = "#mceu_64";
+        cb = "#mceu_65";
+        frb = "#mceu_66";
+        bq = "#mceu_67";
+        t = "#mceu_68";
+        ib = "#mceu_69";
+    } else if (text61 == "Heading 1") {
+        h1 = "#mceu_61";
+        h2 = "#mceu_62";
+        h3 = "#mceu_63";
+        h4 = "#mceu_64";
+        para = "#mceu_65";
+        cb = "#mceu_66";
+        frb = "#mceu_67";
+        bq = "#mceu_68";
+        t = "#mceu_69";
+        ib = "#mceu_70";
+    } else if (text62 == "Heading 1") {
+        h1 = "#mceu_62";
+        h2 = "#mceu_63";
+        h3 = "#mceu_64";
+        h4 = "#mceu_65";
+        para = "#mceu_66";
+        cb = "#mceu_67";
+        frb = "#mceu_68";
+        bq = "#mceu_69";
+        t = "#mceu_70";
+        ib = "#mceu_71";
+    } else if (text63 == "Heading 1") {
+        h1 = "#mceu_63";
+        h2 = "#mceu_64";
+        h3 = "#mceu_65";
+        h4 = "#mceu_66";
+        para = "#mceu_67";
+        cb = "#mceu_68";
+        frb = "#mceu_69";
+        bq = "#mceu_70";
+        t = "#mceu_71";
+        ib = "#mceu_72";
     }
     triggerMouseEvent (document.querySelector ("#mceu_0"), "click");
     //event listner
