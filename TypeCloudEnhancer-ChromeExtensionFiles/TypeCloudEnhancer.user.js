@@ -233,7 +233,7 @@ setTimeout(function() {
     var btngrpbdy = document.createElement('div');
     btngrpbdy.setAttribute('id', 'custom-btn-group-body');
     btngrp.appendChild(btngrpbdy);
-    $('#mceu_32-body').append(btngrp);
+    $('#mceu_34-body').append(btngrp);
 
     // add link in tool bar to cdp shortcut list on github
     var btn = document.createElement('div');
@@ -358,7 +358,7 @@ setTimeout(function() {
     btn.onmouseover = function(){document.getElementById('imgbrdall').style.display = 'block';};
     btn.onmouseout = function(){document.getElementById('imgbrdall').style.display = 'none';};
     document.getElementById("custom-btn-group-body").appendChild(btn);
-    
+
     btn = document.createElement('div');
     btn.setAttribute('id', 'delcmtsbtn');
     btn.setAttribute('class', 'mce-widget mce-btn mce-last');
